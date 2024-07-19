@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LLMFarmEval" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqD-8j-tFv">
+                                <rect key="frame" x="16" y="190" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Oa9-sT-En3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Run Automation"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kxx-jb-Hf3"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Output filename (no extension)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5r-zo-XVk">
+                                <rect key="frame" x="16" y="106" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhA-Dd-zoq">
+                                <rect key="frame" x="16" y="258" width="361" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dpK-ht-IbS"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Terminate App"/>
+                                <connections>
+                                    <action selector="terminateAppAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w8h-cY-21D"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model name to execute (including extension)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71U-ir-Vpb">
+                                <rect key="frame" x="16" y="148" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vo9-Pq-k3B">
+                                <rect key="frame" x="16" y="326" width="361" height="492"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vo9-Pq-k3B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3ow-pT-wmv"/>
+                            <constraint firstItem="U5r-zo-XVk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3uS-Qi-Zar"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vo9-Pq-k3B" secondAttribute="bottom" id="4Pb-EN-jMq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FqD-8j-tFv" secondAttribute="trailing" constant="16" id="BoP-EZ-SLo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dhA-Dd-zoq" secondAttribute="trailing" constant="16" id="D3f-Xa-ihH"/>
+                            <constraint firstItem="FqD-8j-tFv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dnd-wE-o2T"/>
+                            <constraint firstItem="71U-ir-Vpb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Iq8-zS-ydW"/>
+                            <constraint firstItem="dhA-Dd-zoq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PqE-nM-JCe"/>
+                            <constraint firstItem="vo9-Pq-k3B" firstAttribute="top" secondItem="dhA-Dd-zoq" secondAttribute="bottom" constant="8" symbolic="YES" id="Uw6-uc-SN4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="71U-ir-Vpb" secondAttribute="trailing" constant="16" id="ZHz-29-Umo"/>
+                            <constraint firstItem="71U-ir-Vpb" firstAttribute="top" secondItem="U5r-zo-XVk" secondAttribute="bottom" constant="8" symbolic="YES" id="aS2-xa-bwS"/>
+                            <constraint firstItem="dhA-Dd-zoq" firstAttribute="top" secondItem="FqD-8j-tFv" secondAttribute="bottom" constant="8" symbolic="YES" id="gfG-FE-6Y0"/>
+                            <constraint firstItem="U5r-zo-XVk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="kE3-xI-aMg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U5r-zo-XVk" secondAttribute="trailing" constant="16" id="mj0-HL-TcH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vo9-Pq-k3B" secondAttribute="trailing" constant="16" id="ojV-1N-kUH"/>
+                            <constraint firstItem="FqD-8j-tFv" firstAttribute="top" secondItem="71U-ir-Vpb" secondAttribute="bottom" constant="8" symbolic="YES" id="pdi-uw-QKu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actionButton" destination="FqD-8j-tFv" id="fI9-6E-h0U"/>
+                        <outlet property="filenameTextField" destination="U5r-zo-XVk" id="Qza-WQ-hlV"/>
+                        <outlet property="modelTextField" destination="71U-ir-Vpb" id="LDX-D0-Hhx"/>
+                        <outlet property="textView" destination="vo9-Pq-k3B" id="kQg-Xa-ZfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25.190839694656489" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
